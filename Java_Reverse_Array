@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        String[] strAray = line.split(" ");
+
+        int[] array = new int[strAray.length];
+        for (int i=0; i<array.length; i++) {
+            array[i] = Integer.parseInt(strAray[i]);
+        }
+        int k = array.length - 1;
+        System.out.print(array[k]);
+        for (int i=0; i<k; i++) {
+            System.out.print(", " + array[k - i - 1]);
+        }
+    }
+}
